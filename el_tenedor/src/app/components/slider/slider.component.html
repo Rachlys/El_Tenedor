@@ -1,0 +1,42 @@
+
+
+<div class="wrapper">
+    
+    <div class="slider">
+        <div class="slider__info">
+            <h2 class="slider__h2">{{ titulo }}</h2>
+            <ul *ngIf=" flechas " class="slider__arrows">
+                <li class="slider__arrow">
+                    <button
+                        (click)=" disminuirRow() "
+                        [ngClass]=" { 'inactive' : this.posicion <= 0 } "  
+                        class="slider__btn"> < </button>
+                </li>
+                <li class="slider__arrow">
+                    <button
+                        (click)=" aumentarRow() "
+                        [ngClass]=" { 'inactive' : this.posicion >= this.numMovientos - 1 } "
+                        class="slider__btn"> > </button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="slider__mask">
+            <div class="slider__slide" [ngStyle]=" { 
+                'width'                 : calcularAncho(),
+                'transform'             : calcularTransform(),
+                'grid-template-columns' : calcularGrid() 
+            } "
+            >
+                
+                <app-slider-card
+                    *ngFor=" let cadaRestaurante of restaurantes"
+                    [info]=" cadaRestaurante "
+                    ></app-slider-card>
+                    
+            </div>
+        </div>
+
+    </div>
+
+</div>

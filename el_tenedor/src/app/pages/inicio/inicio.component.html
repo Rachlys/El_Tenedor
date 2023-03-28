@@ -1,0 +1,27 @@
+<app-descubre-tarjeta></app-descubre-tarjeta>
+<app-buscador></app-buscador>
+<app-propositos></app-propositos>
+
+<!-- Repetir por 8 con ngFor -->
+<app-slider 
+    *ngFor=" let cadaSlider of sliders "
+    [numElemVisible]=" cadaSlider.numElemVisible "
+    [titulo]=" cadaSlider.titulo "
+    [flechas]=" cadaSlider.flechas "
+    [restaurantes]=" cadaSlider.restaurantes "
+    ></app-slider>
+
+<app-como-funciona></app-como-funciona> 
+
+<!-- Repetimos 2 veces (Ciudades) -->
+<app-slider
+    *ngFor=" let cadaMundo of slidersMundo "
+    [titulo]=" cadaMundo.titulo "
+    [numElemVisible]=" cadaMundo.numElemVisible "
+    [flechas]=" cadaMundo.flechas "
+    [restaurantes]=" cadaMundo.restaurantes "></app-slider>
+
+
+<app-acerca-the-fork></app-acerca-the-fork>
+
+<app-eres-propietario></app-eres-propietario>

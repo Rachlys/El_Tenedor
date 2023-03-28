@@ -1,0 +1,60 @@
+<section class="buscador">
+    <div class="wrapper">
+
+        <h2 class="buscador__h2">Descubre y reserva el mejor restaurante</h2>
+        <form class="buscador__form">
+            <div class="buscador__input">
+                <label class="buscador__label" for="tipo">Qué</label>
+                <div class="buscador__text__contain">
+                    
+                    <img class="buscador__icon" src="assets/svg/forks.svg" alt="">
+                    <input (click)="todosRestaurantes()" (keyup)="keyDownRestaurantes()"
+                    class="buscador__text"
+                    name="buscador"
+                    [(ngModel)]=" termino "
+                    id="tipo"
+                    type="text"
+                    placeholder="Nombre del restaurante..."
+                    >
+                
+                </div>
+
+
+
+                <ul *ngIf="todos_restaurantes" class="buscador__ul">
+                    <li class="buscador__li">
+                        <img class="buscador__img" src="assets/svg/restaurante.svg" alt="">
+                        <a class="buscador__a" [routerLink]=" ['/restaurante' ] ">
+                            Todos los restaurantes
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="buscador__ul" *ngIf="!todos_restaurantes">
+                    <li class="buscador__li" *ngFor="let cadaRestaurante of restaurantes | busqueda:termino ">
+                        <img class="buscador__img" src="assets/svg/restaurante.svg" alt="">
+                        <a class="buscador__a" [routerLink]=" ['/restaurante' , cadaRestaurante.url ] ">
+                            <p class="buscador__p">{{ cadaRestaurante.nombre }}</p>
+                            <p class="buscador__p smaller"> {{cadaRestaurante.descripcion}} </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="buscador__input">
+                <label class="buscador__label" for="ciudad">Dónde</label>
+                <div class="buscador__text__contain">
+                    <img class="buscador__icon" src="assets/svg/ubicacion.svg" alt="">
+                    <input class="buscador__text" id="ciudad" type="text" placeholder="Madrid">
+                </div>
+                
+            </div>
+
+            <div class="buscador__input">
+                <input class="buscador__submit" type="submit" value="Búsqueda">
+            </div>
+        </form>
+        
+    </div>
+</section>
+

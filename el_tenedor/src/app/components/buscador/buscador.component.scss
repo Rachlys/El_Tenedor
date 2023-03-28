@@ -1,0 +1,111 @@
+.buscador{
+    width:100%;
+    background: var(--color-gris) url('/assets/img/bg.png') no-repeat 80% / 30%  ;
+    padding: 6.5vh 0;
+}
+.wrapper{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.buscador__h2{
+    max-width:17em;
+    margin: 0 0 1rem;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.6em;
+    color:var(--color-negro);
+}
+.buscador__form{
+    width:100%;
+    max-width:28em;
+    background:var(--color-blanco);
+    padding:1.6em;
+    position:  relative;
+    box-shadow: -3px 3px 1em 0 rgba(0,0,0,.1);
+}
+.buscador__input{
+    margin: 0 0 1rem;
+}
+.buscador__input:last-child{
+    margin: 0 0 0rem;
+}
+
+.buscador__text__contain{
+    width:100%;
+    
+    border: 1px solid #929292;
+    border-radius:var(--radius);
+    padding: .8em;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: .5em;
+}
+.buscador__text{
+    width:100%;
+    &:focus{
+        outline: none;
+    }
+
+}
+
+.buscador__icon{
+    width: 1em;
+    height: 1em;
+}
+.buscador__text::placeholder{
+    font-style:italic;
+}
+.buscador__label{
+    margin: 0 0 .4rem .4rem;
+    font-size:.6em ;
+}
+
+.buscador__submit{
+    width:100%;
+    background:red;
+    padding:.7em 1em;
+    background:var(--color-verde-uno);
+    color:var(--color-blanco);
+    border-radius:var(--radius);
+    text-transform:uppercase;
+    cursor: pointer;
+}
+
+.buscador__ul{
+    position: absolute;
+    background-color: white;
+    width: 90%;
+
+}
+.buscador__li{
+    height: 4em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #d3d3d3;
+    gap: 1rem;
+}
+
+.buscador__img{
+    width: 2em;
+    height: 2em;
+    padding: .3rem;
+    border-radius: 6px;
+    border: 1px solid lightgray;
+    margin: 0 0 0 1em;
+}
+
+.buscador__a{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.buscador__p{
+    &.smaller{
+        font-size: smaller;
+    }
+}

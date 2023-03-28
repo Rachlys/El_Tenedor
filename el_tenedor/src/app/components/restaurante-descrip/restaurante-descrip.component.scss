@@ -1,0 +1,144 @@
+.section__descrip{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.section__info-tags{
+    width: 100%;
+    height: 2.5em;
+    margin-top: 2rem;
+    padding: .5em;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: .5em;
+}
+.yums{
+    background-color: #FFDD00;
+    color: #ffffff;
+    font-size: smaller;
+    padding: .3em .4em;
+    border-radius: 5px;
+}
+
+
+.insider{
+    background-color: #28433C;
+    color: #ffffff;
+    font-size: smaller;
+    padding: .3em .4em;
+    border-radius: 5px;
+
+}
+
+.pay{
+    background-color: #1C1835;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: .3em .4em;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: smaller;
+
+    svg{
+        width: 1em;
+        height: 1em;
+    }
+}
+
+.types{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.types__p{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: smaller;
+}
+
+.types__p::after{
+    content:  '';
+    display: block;
+    width:3px;
+    height:3px;
+    background: black;
+    margin: 0 .5rem ;
+    border-radius: 50%;
+}
+
+.types__p:last-child::after{ content: none; }
+
+
+.section__title{
+    margin-top: .5em;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.section__title-h2{
+    font-size: 200%;
+    font-weight: 500;
+}
+.section__title-h1{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    gap: .3rem;
+
+    div{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    }
+}
+
+.title{
+    font-size: 200%;
+    font-weight: 600;
+}
+.comments{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: .3rem;
+    svg{
+        width: 1em;
+        height: 1em;
+    }
+}
+
+
+.section__description{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+
+.section__description-adress{
+    width: 105%;
+    display: flex;
+    flex-flow:  column nowrap;
+    gap: .5rem;
+}
+.adress{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    align-items: flex-end;
+    .map{
+        font-size: smaller;
+        color: #689E54;
+    }
+}
+.discount{
+    color: #CB1A23;
+    font-size: larger;
+    border-left: 3px solid #CB1A23;
+    font-weight: 600;
+}

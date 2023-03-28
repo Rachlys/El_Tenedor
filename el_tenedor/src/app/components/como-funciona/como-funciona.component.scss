@@ -1,0 +1,34 @@
+.funciona{
+    padding:2em 0;
+}
+.funciona__h3{
+    margin: 0 0 1rem;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+.funciona__info{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.funciona__article{
+    flex-basis: calc( 100% / 4 - 2em );
+    
+}
+.funciona__svg{
+    width:3rem;
+    height:3rem;
+    margin: .5rem 0 1rem;
+}
+.funciona__h4{
+    margin: 0 0 .5rem;
+}
+.funciona__p{
+    line-height: 1.6rem;
+    font-size: .85em;
+    font-weight: 300;
+}
+
+
+

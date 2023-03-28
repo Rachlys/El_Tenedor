@@ -1,0 +1,141 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --color-gris        : #f2f6f4;
+    --color-gris-before : hsl(218, 9%, 77%);
+    --color-gris-sec    : #3c4048;
+    --color-blanco      : #fff;
+    --color-negro       : #000;
+
+    --color-verde-uno   : hsl(104, 38%, 42%);
+    --color-verde-dos   : hsl(104, 28%, 74%);
+    --color-verder-light : #F3FCF3;
+    --color-amarillo    : hsl(52, 100%, 50%);
+
+    --tipo-color-gris   : rgb(60, 64, 72);
+    --tipo-color-verde  : #589442;
+  
+    --tipo-principal: 'Raleway';
+    --tipo-secundaria: Verdana;
+  
+    --radius: .3rem;
+    
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --color-gris    : #151515;
+            --color-blanco  : hsl(120, 3%, 15%);
+        }
+    }
+}
+  
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+  }
+  
+  img,
+  picture,
+  video,
+  iframe,
+  figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  
+  a {
+    display: block;
+  }
+  
+  p a {
+    display: inline;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  a,
+  strong,
+  blockquote,
+  i,
+  b,
+  u,
+  em {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: "";
+    content: none;
+  }
+  
+  ::selection {
+    background-color: var(--color-blanco);
+    color: var(--color-verde-ppal);
+  }
+  
+  form,
+  input,
+  textarea,
+  select,
+  button,
+  label {
+    font-family: inherit;
+    font-size: inherit;
+    hyphens: auto;
+    background-color: transparent;
+    display: block;
+    color: inherit;
+  }
+  
+  table,
+  tr,
+  td {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+  }
+  
+  body {
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: 'Raleway', sans-serif;
+    color: var(--tipo-color-gris);
+    background-color: var(--color-blanco);
+  }
+  
+
+  .wrapper{
+    width:90%;
+    max-width: 1060px;
+    margin: auto;
+  
+  }

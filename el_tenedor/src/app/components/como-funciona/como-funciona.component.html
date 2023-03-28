@@ -1,0 +1,17 @@
+<div class="funciona">
+    <div class="wrapper">
+        <h3 class="funciona__h3">¿Cómo funciona?</h3>
+
+        <div class="funciona__info">
+            <article 
+                *ngFor="let cadaArticle of comoFunciona; let i = index "
+                class="funciona__article">
+                <img class="funciona__svg" [src]=" cadaArticle.src " [alt]=" cadaArticle.h4 " >
+                <h4 class="funciona__h4">{{ cadaArticle.h4 }}</h4>
+                <p class="funciona__p">{{ cadaArticle.p }}</p>
+            </article>
+        </div>
+
+        
+    </div>
+</div>

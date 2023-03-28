@@ -1,0 +1,33 @@
+
+
+<div class="section__nav">
+    <img alt="Guía de restaurantes" src="https://www.thefork.es/_next/static/media/home-icon.b787c4bb.svg">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false" font-size="xs" marginBottom="xxs" marginLeft="xs" color="gray.xl" class="css-1vl94p9 e10xbrur0"><path fill-rule="evenodd" d="M8.25 20.5a1.002 1.002 0 0 1-.673-1.74l7.436-6.756-7.436-6.765a1 1 0 1 1 1.346-1.478l8.249 7.504a1 1 0 0 1 0 1.479L8.923 20.24c-.193.174-.433.26-.673.26"></path></svg>
+    <p><a [routerLink]="['/ciudad', infoRestaurante.ciudad ]" > Restaurantes en {{infoRestaurante.ciudad}} </a></p>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false" font-size="xs" marginBottom="xxs" marginLeft="xs" color="gray.xl" class="css-1vl94p9 e10xbrur0"><path fill-rule="evenodd" d="M8.25 20.5a1.002 1.002 0 0 1-.673-1.74l7.436-6.756-7.436-6.765a1 1 0 1 1 1.346-1.478l8.249 7.504a1 1 0 0 1 0 1.479L8.923 20.24c-.193.174-.433.26-.673.26"></path></svg>
+    <p> {{infoRestaurante.nombre}} </p>
+</div>
+
+<div class="section__cover">
+    <img class="section__cover-img" [src]=" infoRestaurante.imagen " [alt]=" infoRestaurante.nombre ">
+</div>
+
+
+<div *ngIf="ready" class="section">
+
+    <div class="first_section">
+        <app-restaurante-descrip [restaurante]="infoRestaurante" ></app-restaurante-descrip>
+        <app-restaurante-info [oferta]="infoRestaurante.oferta"></app-restaurante-info>
+        <app-restaurante-menu></app-restaurante-menu>
+        <app-restaurante-regalo [titulo]="infoRestaurante.nombre" [imagen]="infoRestaurante.imagen" ></app-restaurante-regalo>
+        <app-restaurante-opiniones [nota]=" infoRestaurante.nota"></app-restaurante-opiniones>    
+    </div>
+    <div class="second_section">
+        <app-restaurante-calendar></app-restaurante-calendar>
+    </div>
+
+    
+
+</div>
+
+<app-eres-propietario></app-eres-propietario>

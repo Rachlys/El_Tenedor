@@ -1,0 +1,141 @@
+.card{
+    width:calc( 100% - 1em );
+    padding:1em;
+    border-radius: var(--radius);
+    box-shadow: 0px 0px 0em rgba(0,0,0,0) ;
+    transition: all .5s ease;
+}
+.card:hover{
+    box-shadow: -3px 3px 1em rgba(0,0,0,.2) ;
+}
+.card__mask{
+    
+    border-radius: var(--radius);
+    margin: 0 0 1em;
+
+    position: relative;
+}
+.card__img{
+    min-height:10em;
+    background:lightgray;
+    border-radius: 5px;
+}
+
+.card__h2{
+    
+    position:absolute;
+    bottom:1em;
+    left:1em;
+}
+.card__h2.ciudad{
+    color:white;
+    font-weight: 600;
+    text-shadow: 0 0 5px black;
+}
+.card__tipos{
+    
+    margin: 0 0 1em;
+
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.card__tipo{
+    font-size: .7em;
+    text-transform: uppercase;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.card__tipo::after{
+    content:  '';
+    display: block;
+    width:3px;
+    height:3px;
+    background: black;
+    margin: 0 .5rem ;
+    border-radius: 50%;
+}
+.card__tipo:last-child::after{ content: none; }
+
+.card__info{
+    margin: 0 0 1em;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.card__title{
+    font-weight: 700;
+}
+.card__nota{
+    font-weight: 600;
+}
+
+.card__caracteristicas{
+    
+    margin: 0 0 1em;
+
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.card__spec{
+    margin: 0 .3rem 0 0;
+    font-size: .6em;
+    
+    border-radius: 5px;
+    padding: .25em .5em .4em;
+    border-radius: 5px;
+}
+.card__spec--insider{
+    background: var(--color-negro);
+    color:var(--color-blanco);
+}
+.card__spec--yums{
+    background: var(--color-amarillo);
+    color:var(--color-negro);
+}
+.card__spec--pay{
+    background: var(--color-negro);
+    color:var(--color-blanco);
+}
+.card__p{
+    margin: 0 0 1em;
+}
+.card__ofertas{
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.card__oferta{
+    margin: 0 1em 0 0;
+    font-size: .9em;
+}
+.card__oferta--descuento{
+    background: var(--color-negro);
+    color:var(--color-blanco);
+    padding: .25em .5em .4em;
+    border-radius: 5px;
+}
+.card__oferta--yums{
+    border-bottom: 2px solid var(--color-amarillo);
+    font-weight: 600;
+}
+.card__restaurante{
+    margin:1em 0 0 ;
+}
+
+/* Estilos propios: Restaurante */
+.oferta .card__p{
+    font-size: .8em;
+    min-height: 2.5em;
+}
+.ciudad.card{
+    padding:0;
+}

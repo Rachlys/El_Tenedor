@@ -1,0 +1,26 @@
+<article class="article__info">
+
+    <ul>
+        <li *ngFor="let indice of nav; let i = index" (click)="changePosition(i)"
+        [ngClass]="{ 'active' : this.position === i}"
+         > {{indice}} </li>
+    </ul>
+
+    <h1 class="article__info-h1"> Ofertas de TheFork </h1>
+
+    <div class="article__info-cards">
+        <div class="card">
+            <h1> -{{oferta}}% en carta - TheFork Festival </h1>
+            <p> Bebidas y Menús no incluidos. Válida en la franja horaria seleccionada. </p>
+            <p class="green"> Ver detalles de la oferta </p>
+            <button > Reserva con esta oferta</button>
+        </div>
+        <div class="card">
+            <h1> -{{oferta}}% en carta - TheFork Festival </h1>
+            <p> Bebidas y Menús no incluidos. Válida en la franja horaria seleccionada. </p>
+            <p class="green"> Ver detalles de la oferta </p>
+            <button> Reserva con esta oferta</button>
+        </div>
+    </div>
+
+</article>

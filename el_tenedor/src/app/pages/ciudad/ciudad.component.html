@@ -1,0 +1,11 @@
+<div class="wrapper">
+
+
+    <h1>Estás en la ciudad de {{ ciudades.nombre }}</h1>
+
+    <app-slider *ngIf="ready"
+        [titulo]=" 'Los mejores restaurantes de ' + ciudades.nombre "
+        [flechas]=" true "
+        [restaurantes]=" restaurantes"
+        ></app-slider>
+</div>

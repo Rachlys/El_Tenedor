@@ -1,0 +1,37 @@
+<a 
+  [routerLink]=" [ '/' + info.dato  , info.url ] "
+  [ngClass]=" info.dato "
+  class="card">
+  <div class="card__mask">
+    <img class="card__img" [src]="info.imagen" [alt]="info.nombre" />
+    <h2 *ngIf=" info.dato === 'ciudad' " class="card__h2 ciudad">{{ info.nombre }}</h2>
+  </div>
+
+  <ul *ngIf="info.dato === 'restaurante'" class="card__tipos">
+    <li *ngFor="let cadaTipo of info.tipos" class="card__tipo">
+      {{ cadaTipo }}
+    </li>
+  </ul>
+
+  <div *ngIf="info.dato !== 'ciudad'" class="card__info">
+    <h2 class="card__title">{{ info.nombre }}</h2>
+    <div *ngIf="info.dato === 'restaurante'" class="card__nota">
+      {{ info.nota }}
+    </div>
+  </div>
+
+  <ul *ngIf="info.dato === 'restaurante'" class="card__caracteristicas">
+    <li *ngIf="info.insider"    class="card__spec card__spec--insider">INSIDER</li>
+    <li *ngIf="info.pagos.yums" class="card__spec card__spec--yums">DOUBLE YUMS</li>
+    <li *ngIf="info.pagos.pay"  class="card__spec card__spec--pay">PAY</li>
+  </ul>
+
+  <p *ngIf="info.dato !== 'ciudad'" class="card__p">{{ info.descripcion }}</p>
+
+  <ul *ngIf="info.dato === 'restaurante'" class="card__ofertas">
+    <li *ngIf="info.oferta" class="card__oferta card__oferta--descuento">-{{ info.oferta }}%</li>
+    <li *ngIf="info.pagos.yums" class="card__oferta card__oferta--yums ">Acepta Yums</li>
+  </ul>
+
+  <p *ngIf="info.dato === 'oferta'" class="card__restaurante">Ver los restaurantes</p>
+</a>

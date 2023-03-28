@@ -1,0 +1,58 @@
+.article__regalo{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    border-bottom: 1px solid lightgrey;
+    border-top: 1px solid lightgrey;
+    padding: 2rem;
+    gap: 1em;
+}
+.article__regalo-title{
+    width: 100%;
+    font-size: 140%;
+    font-weight: 600;
+}
+.article__regalo-info{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1em;
+}
+.article__regalo-img{
+    width: 8rem;
+    height: 6rem;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    svg{
+        width: 3.5em;
+        height: 3.5em;
+    }
+}
+
+.article__regalo-text{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 1em;
+    p{
+        width: 100%;
+    }
+    button{
+        font-size: smaller;
+        border: 1px solid var(--tipo-color-verde);
+        color: var(--tipo-color-verde);
+        padding: .5rem;
+        cursor: pointer;
+    &:hover{
+        background-color: #F3FCF3;
+    }
+    }
+
+
+}
